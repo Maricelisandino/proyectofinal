@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mensaje Positivo del Día</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #fef6e4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+    button {
+        padding: 12px 25px;
+        background-color: #ff8ba7;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff5d8f;
+    }
+    #mensaje {
+        margin-top: 20px;
+        font-size: 22px;
+        color: #5e548e;
+        padding: 0 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>✨ Mensaje Positivo del Día ✨</h1>
+
+<button onclick="generarMensaje()">Mostrar mensaje</button>
+
+<p id="mensaje"></p>
+
+<script>
+    const mensajes = [
+        "Hoy es un gran día para comenzar algo increíble.",
+        "Cree en ti, lo mejor está por venir.",
+        "Tu esfuerzo de hoy construye tu éxito de mañana.",
+        "Eres más fuerte de lo que piensas.",
+        "Tu luz puede cambiar el día de alguien.",
+        "Un pequeño paso hoy puede ser un gran avance mañana.",
+        "Confía en el proceso, vas por buen camino.",
+        "Respira, suelta y sigue adelante."
+    ];
+
+    function generarMensaje() {
+        const mensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
+        document.getElementById("mensaje").textContent = mensaje;
+    }
+</script>
+
+</body>
+</html>
